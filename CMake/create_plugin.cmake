@@ -6,7 +6,8 @@ macro(create_plugin target name companyName manufacturerCode pluginCode)
             PRODUCT_NAME ${name}
             COMPANY_NAME ${companyName}
             IS_SYNTH FALSE
-            NEEDS_MIDI_INPUT FALSE)
+            NEEDS_MIDI_INPUT FALSE
+            COPY_PLUGIN_AFTER_BUILD TRUE)
 
     juce_generate_juce_header(${target})
 
